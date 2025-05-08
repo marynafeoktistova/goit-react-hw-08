@@ -1,37 +1,65 @@
- .containerContac {
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap:13px;
-}
-s.thumbContact{
-white-space: nowrap;
-overflow: hidden;
-}
-.nameContact {
-display: flex;
-align-items: center;
-gap: 5px;
-font-size: 18px;
-font-weight: 700;
-margin-bottom: 5px;
-}
-.buttonDelete {
-display: flex;
-gap: 5px;
-justify-content: center;
-width: 100px;
-border-radius: 60px;
-background-color: #1d1d1d;
-border: none;
-color: #fff;
-box-shadow: 0 4px 4px #00000026;
-font-size: 15px;
-transition: background-color .5s cubic-bezier(.4, 0, .2, 1), color .5s cubic-bezier(.4, 0, .2, 1);
-padding: 10px 15px;
+.containerContac {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.buttonDelete:hover {
-background-color: #484848;
-color: #bea69e;
+.thumbContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nameContact {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 19px;
+  color: rgb(71, 71, 71);
+  margin-bottom: 5px;
+}
+
+.numberContact {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgb(71, 71, 71);
+  font-size: 17px;
+}
+
+.iconContact {
+  color: #e87438;
+  transition: color .4s cubic-bezier(.4, 0, .2, 1);
+}
+
+.thumbBtn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttonAction {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 5px;
+
+  width: 105px;
+
+  border-radius: 50px;
+  background-color: #e1dae9;
+  box-shadow: 0 1px 1px #00000024, 0 1px 3px #0000001f, 0 2px 1px #0003;
+  padding: 7px 0;
+  border: none;
+  color: #00afd7;
+
+  transition: background-color .4s cubic-bezier(.4, 0, .2, 1), color .4s cubic-bezier(.4, 0, .2, 1);
+}
+
+.buttonAction:hover {
+  background-color: #00afd7;
+  color: #f0eafa;
+}
+
+.buttonAction:hover .iconContact {
+  color: #f0eafa;
 }

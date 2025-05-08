@@ -1,25 +1,26 @@
-import css from './App.module.css';
-import ContactForm from '../ContactForm/ContactForm';
-import ContactList from '../ContactList/ContactList';
-import SearchBox from '../SearchBox/SearchBox';
-import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from '../../redux/contactsOps';
+import RouteSection from '../RouteSection/RouteSection';
+import { refreshUser } from '../../redux/auth/operation';
+import { useDispatch } from 'react-redux';
+import { useAuth } from '../../hooks/useAuth';
+import { LinearProgress } from '@mui/material';
+
+import AOS from 'aos';
+AOS.init();
 
 function App() {
   const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
-
-  return (
-    <div className={css.container}>
-      <h1 className={css.mainTitle}>Phonebook 📱</h1>
-      <ContactForm />
-      <SearchBox />
-      <ContactList />
-    </div>
+  return isRefreshing ? (
+    <LinearProgress />
+  ) : (
+    <>
+      <RouteSection />
+    </>
   );
 }
 

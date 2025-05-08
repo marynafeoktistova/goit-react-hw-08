@@ -1,11 +1,13 @@
 import css from './SearchBox.module.css';
+import { IoCloseOutline } from 'react-icons/io5';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectNameFilter } from '../../redux/selectors';
-import { changeFilter } from '../../redux/filtersSlice';
+import { selectNameFilter } from '../../redux/filters/selectors';
+import { initialStateFilter } from '../../redux/filters/constants';
+import { changeFilter } from '../../redux/filters/filtersSlice';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
-const initialStateFilter = {
-  name: '',
-};
 const SearchBox = () => {
   const searchValue = useSelector(selectNameFilter);
   const dispatch = useDispatch();
@@ -19,13 +21,11 @@ const SearchBox = () => {
   };
 
   return (
-    <div className={css.container}>
-      <p className={css.inputText}>Find contacts by name</p>
-      <div className={css.container}>
+    <div data-aos='zoom-in' className={css.container}>
+      <p className={css.inputText}>Find contacts</p>
+      <div className={css.thumbInput}>
         <input className={css.formInput} type='text' value={searchValue} onChange={handelInputSearch} />
-        <button className={css.cleanButton} onClick={cleanInput}>
-          Clear
-        </button>
+        <IoCloseOutline className={css.iconClean} size='20' onClick={cleanInput} />
       </div>
     </div>
   );

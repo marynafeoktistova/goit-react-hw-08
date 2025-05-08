@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useAuth } from '../../hooks/useAuth';
-import { logOut } from '../../redux/auth/operation';
+import { logOut } from '../../redux/auth/operations';
 import { Avatar } from '@mui/material';
 import style from './UserMenu.module.css';
 

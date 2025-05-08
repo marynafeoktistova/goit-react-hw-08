@@ -7,7 +7,7 @@ import styleRegist from './RegisterForm.module.css';
 import { RiLockPasswordLine, RiUser3Line } from 'react-icons/ri';
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import { MdOutlineMailOutline } from 'react-icons/md';
-import { register } from '../../redux/auth/operation';
+import { register } from '../../redux/auth/operations';
 import { initialValuesSignUp } from '../../redux/auth/constants';
 import loginBoy from '../../assets/img/sign-up/signup.png';
 import loginLamp from '../../assets/img/sign-in/lampshade.png';

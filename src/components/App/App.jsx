@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import RouteSection from '../RouteSection/RouteSection';
-import { refreshUser } from '../../redux/auth/operation';
+import { refreshUser } from '../../redux/auth/operations';
 import { useDispatch } from 'react-redux';
 import { useAuth } from '../../hooks/useAuth';
 import { LinearProgress } from '@mui/material';

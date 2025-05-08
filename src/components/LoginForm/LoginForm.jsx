@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import { useId, useState } from 'react';
-import { logIn } from '../../redux/auth/operation';
+import { logIn } from '../../redux/auth/operations';
 import { initialValuesSignIn } from '../../redux/auth/constants';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import style from './LoginForm.module.css';
